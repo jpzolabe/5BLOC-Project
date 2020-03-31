@@ -29,6 +29,7 @@ Mise en place d’une plateforme de vote décentralisée qui tirera parti des av
 Un certain nombre de dépendances est nécessaire pour le déploiement et l’exécution de l’application.
 
 a-	NPM : https://nodejs.org
+
 Télécharger et installer une version récente de Node.js, de préférence Node.js 8+ (10.x.x dans notre cas). Après le téléchargement, exécuter l’exe. Vérifier à travers la commande suivante s’il a bien été installé :
 
 ``
@@ -36,6 +37,7 @@ $ node -v
 ``
 
 b-	Truffle : https://www.trufflesuite.com/truffle
+
 Truffle : est un Framework qui permet de développer des applications décentralisées sur la blockchain Ethereum. Il fournit une suite d'outils qui nous permettent d'écrire des smart contrat avec le langage de programmation Solidity. Il nous permet également de tester nos smart contrats et de les déployer sur la blockchain. Pour l’installation, exécuter la commande suivante : 
 
 ``
@@ -43,13 +45,16 @@ $ npm install -g truffle
 ``
 
 c-	Ganache : http://truffleframework.com/ganache/
+
 Ganache : est une technologie qui nous permet de mettre en place une blockchain Ethereum en local sur notre poste de travail dans le but de tester ou déployer notre dApp. Apres téléchargement, installer de manière classique.
 
 d-	Metamask
+
 Metamask est une extension de google chrome qui permet aux utilisateurs d’avoir accès à la blockchain à travers un wallet et sans avoir à se constituer en node. Installation à faire à partir du store des extensions de google chrome.
 
 
 ### 2-	Déploiement 
+
 Après l’installation des dépendances nécessaire, vous pouvez cloner le projet :
 
 a-	 ``

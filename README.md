@@ -27,6 +27,7 @@ Mise en place d’une plateforme de vote décentralisée qui tirera parti des av
 
 ### 1-	Installations des dépendances :
 Un certain nombre de dépendances est nécessaire pour le déploiement et l’exécution de l’application.
+
 a-	NPM : https://nodejs.org
 Télécharger et installer une version récente de Node.js, de préférence Node.js 8+ (10.x.x dans notre cas). Après le téléchargement, exécuter l’exe. Vérifier à travers la commande suivante s’il a bien été installé :
 

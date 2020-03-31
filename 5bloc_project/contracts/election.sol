@@ -10,6 +10,9 @@ contract Election {
     
     uint32 private startTimestamp;
     uint32 private endTimestamp;
+    string private label;
+    
+    event ElectionLaunched(Election election);
 
     // Store accounts that have voted
     mapping(address => bool) public voters;
@@ -38,11 +41,19 @@ contract Election {
         uint32 currentTime = uint32(now);
         return startTimestamp <= currentTime && endTimestamp > currentTime;
     }
+    
+     function launch(string calldata _label, uint32 _startTimestamp, uint32 _endTimestamp) external  {
+        label = _label;
+        startTimestamp = _startTimestamp;
+        endTimestamp = _endTimestamp;
+
+        emit ElectionLaunched(this);
+    }
 
     function vote (uint _candidateId) public {
         // require that vote is still active
         require(isActive(), "Election not active anymore");
-        // require that voters haven't voted before
+        // require that they haven't voted before
         require(!voters[msg.sender]);
 
         // require a valid candidate

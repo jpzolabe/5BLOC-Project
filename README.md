@@ -1,8 +1,8 @@
 # PROJET 5BLOC
-Documentation technique
-Version : 1.0
-Date : 30 /03/2020
-Auteurs : Imane ARMEL, Diego DETOMASSI, Jean Paul ZOLABE, Achille FOGANG
+- Documentation technique
+- Version : 1.0
+- Date : 30 /03/2020
+- Auteurs : Imane ARMEL, Diego DETOMASSI, Jean Paul ZOLABE, Achille FOGANG
 
 
 ## Objectif :

@@ -7,6 +7,9 @@ contract Election {
         string name;
         uint voteCount;
     }
+    
+    uint32 private startTimestamp;
+    uint32 private endTimestamp;
 
     // Store accounts that have voted
     mapping(address => bool) public voters;
@@ -30,8 +33,15 @@ contract Election {
         candidatesCount ++;
         candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
     }
+    
+    function isActive() public view returns (bool) {
+        uint32 currentTime = uint32(now);
+        return startTimestamp <= currentTime && endTimestamp > currentTime;
+    }
 
     function vote (uint _candidateId) public {
+        // require that vote is still active
+        require(isActive(), "Election not active anymore");
         // require that they haven't voted before
         require(!voters[msg.sender]);
 
@@ -46,5 +56,15 @@ contract Election {
 
         // trigger voted event
         votedEvent(_candidateId);
+    }
+    
+    
+    
+    function getStartTimestamp() public view returns (uint32) {
+        return startTimestamp;
+    }
+
+    function getEndTimestamp() public view returns (uint32) {
+        return endTimestamp;
     }
 }

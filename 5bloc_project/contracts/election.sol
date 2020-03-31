@@ -42,7 +42,7 @@ contract Election {
     function vote (uint _candidateId) public {
         // require that vote is still active
         require(isActive(), "Election not active anymore");
-        // require that they haven't voted before
+        // require that voters haven't voted before
         require(!voters[msg.sender]);
 
         // require a valid candidate

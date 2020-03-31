@@ -37,6 +37,7 @@ $ node -v
 
 b-	Truffle : https://www.trufflesuite.com/truffle
 Truffle : est un Framework qui permet de développer des applications décentralisées sur la blockchain Ethereum. Il fournit une suite d'outils qui nous permettent d'écrire des smart contrat avec le langage de programmation Solidity. Il nous permet également de tester nos smart contrats et de les déployer sur la blockchain. Pour l’installation, exécuter la commande suivante : 
+
 ``
 $ npm install -g truffle
 ``
@@ -50,6 +51,7 @@ Metamask est une extension de google chrome qui permet aux utilisateurs d’avoi
 
 ### 2-	Déploiement 
 Après l’installation des dépendances nécessaire, vous pouvez cloner le projet :
+
 a-	 ``
     $ git clone https://github.com/jpzolabe/5bloc_project
     ``
